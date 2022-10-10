@@ -1,0 +1,105 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000         ; WRITE AN ALP TO ADD AN ARRAY OF 16 BIT NUMBERS AND STO
+                       RE THE RESULT IN 32 BIT IN INTERNAL RAM
+    3 00000000         
+    4 00000000                 AREA             PROGRAM, CODE, READONLY
+    5 00000000                 ENTRY
+    6 00000000         
+    7 00000000 E3A00000        MOV              R0, # 0
+    8 00000004 E59F102C        LDR              R1, = ARRAY
+    9 00000008 E3A02005        MOV              R2, #5
+   10 0000000C         
+   11 0000000C E0D130B2 
+                       LOOP    LDRH             R3, [R1], #2
+   12 00000010 E0800003        ADD              R0, R0, R3
+   13 00000014 E2422001        SUB              R2, R2, #1
+   14 00000018 E3520000        CMP              R2, # 0
+   15 0000001C 0A000000        BEQ              STORE
+   16 00000020 1AFFFFF9        BNE              LOOP
+   17 00000024         
+   18 00000024 E59F4010 
+                       STORE   LDR              R4, = SUM
+   19 00000028 E5840000        STR              R0, [R4]
+   20 0000002C         
+   21 0000002C 0B 00 16 
+              00 21 00 
+              2C 00 37 
+              00       ARRAY   DCW              0011, 0022, 0033, 0044, 0055
+   22 00000036         
+   23 00000036 00 00 00000000 
+              00000000         AREA             WRITEDATA, DATA, READWRITE
+   24 00000000 40000000 
+                       SUM     DCD              0X40000000
+   25 00000004                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\labprogram.d -o.\labpr
+ogram.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Ph
+ilips --predefine="__EVAL SETA 1" --list=.\labprogram.lst LABPROGRAM.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARRAY 0000002C
+
+Symbol: ARRAY
+   Definitions
+      At line 21 in file LABPROGRAM.S
+   Uses
+      At line 8 in file LABPROGRAM.S
+Comment: ARRAY used once
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 11 in file LABPROGRAM.S
+   Uses
+      At line 16 in file LABPROGRAM.S
+Comment: LOOP used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 4 in file LABPROGRAM.S
+   Uses
+      None
+Comment: PROGRAM unused
+STORE 00000024
+
+Symbol: STORE
+   Definitions
+      At line 18 in file LABPROGRAM.S
+   Uses
+      At line 15 in file LABPROGRAM.S
+Comment: STORE used once
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+SUM 00000000
+
+Symbol: SUM
+   Definitions
+      At line 24 in file LABPROGRAM.S
+   Uses
+      At line 18 in file LABPROGRAM.S
+Comment: SUM used once
+WRITEDATA 00000000
+
+Symbol: WRITEDATA
+   Definitions
+      At line 23 in file LABPROGRAM.S
+   Uses
+      None
+Comment: WRITEDATA unused
+2 symbols
+339 symbols in table

@@ -1,0 +1,161 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000         ; WRITE AN ALP TO ADD AN ARRAY OF 16 BIT NUMBERS AND STO
+                       RE THE RESULT IN 32 BIT IN INTERNAL RAM
+    3 00000000         
+    4 00000000                 AREA             PROGRAM, CODE, READONLY ; PROGR
+                                                            AM PREREQUISITES IN
+                                                             READ ONLY MEMORY
+    5 00000000                 ENTRY                        ; BEGINNING OF PROG
+                                                            RAM
+    6 00000000         
+    7 00000000 E3A00000        MOV              R0, # 0     ; INITIALIZE R0 WIT
+                                                            H ZERO
+    8 00000004 E59F1038        LDR              R1, = ARRAY ; LOAD THE ADDRESS 
+                                                            OF "ARRAY" INTO R1
+    9 00000008         
+   10 00000008 E59F2038        LDR              R2, = ARRAYSIZE ; LOAD ADDRESS 
+                                                            OF "SIZE" IN R2
+   11 0000000C E5923000        LDR              R3, [R2]    ; LOAD THE CONTENT 
+                                                            OF "SIZE" IN R3
+   12 00000010         
+   13 00000010 E0D140B2 
+                       LOOP    LDRH             R4, [R1], #2 ; LOAD R4 WITH ITE
+                                                            RABLE CONTENT OF "A
+                                                            RRAY", INCREMENT AR
+                                                            RAY COUNTER
+   14 00000014 E0800004        ADD              R0, R0, R4  ; R0 = R0 + R4
+   15 00000018 E2433001        SUB              R3, R3, #1  ; SUBTRACT ARRAYSIZ
+                                                            E BY ONE
+   16 0000001C E3530000        CMP              R3, # 0     ; CHECK IF ARRAYSIZ
+                                                            E IS EQUAL TO ZERO
+   17 00000020 0A000000        BEQ              STORE       ; IF ARRAYSIZE IS Z
+                                                            ERO, BRANCH TO LABE
+                                                            L "STORE"
+   18 00000024 1AFFFFF9        BNE              LOOP        ; LOOP UNTIL ZERO F
+                                                            LAG IS SET HIGH
+   19 00000028         
+   20 00000028 E59F401C 
+                       STORE   LDR              R4, = SUM   ; LOAD ADDRESS OF "
+                                                            SUM" INTO R4
+   21 0000002C E5840000        STR              R0, [R4]    ; STORE CONTENT OF 
+                                                            R0 INTO R4
+   22 00000030         
+   23 00000030 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   24 00000034         
+   25 00000034 00000005 
+                       ARRAYSIZE
+                               DCD              05          ; ARRAYSIZE
+   26 00000038 0B 00 16 
+              00 21 00 
+              2C 00 37 
+              00       ARRAY   DCW              0011, 0022, 0033, 0044, 0055 ; 
+                                                            DEFINING ARRAY LIST
+                                                            
+   27 00000042         
+   28 00000042 00 00 00000000 
+              00000000 
+              00000000         AREA             WRITEDATA, DATA, READWRITE ; PR
+                                                            OGRAM PREREQUISITES
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                             IN READ WRITE MEMO
+                                                            RY
+   29 00000000 40000000 
+                       SUM     DCD              0X40000000  ; LOCATION WHERE TH
+                                                            E SUM OF ARRAY ELEM
+                                                            ENTS IS TO BE STORE
+                                                            D
+   30 00000004                 END                          ; END OF PROGRAM
+Command Line: --debug --xref --apcs=interwork --depend=.\program4.d -o.\program
+4.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philip
+s --predefine="__EVAL SETA 1" --list=.\program4.lst PROGRAM4.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARRAY 00000038
+
+Symbol: ARRAY
+   Definitions
+      At line 26 in file PROGRAM4.S
+   Uses
+      At line 8 in file PROGRAM4.S
+Comment: ARRAY used once
+ARRAYSIZE 00000034
+
+Symbol: ARRAYSIZE
+   Definitions
+      At line 25 in file PROGRAM4.S
+   Uses
+      At line 10 in file PROGRAM4.S
+Comment: ARRAYSIZE used once
+LOOP 00000010
+
+Symbol: LOOP
+   Definitions
+      At line 13 in file PROGRAM4.S
+   Uses
+      At line 18 in file PROGRAM4.S
+Comment: LOOP used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 4 in file PROGRAM4.S
+   Uses
+      None
+Comment: PROGRAM unused
+STOP 00000030
+
+Symbol: STOP
+   Definitions
+      At line 23 in file PROGRAM4.S
+   Uses
+      At line 23 in file PROGRAM4.S
+Comment: STOP used once
+STORE 00000028
+
+Symbol: STORE
+   Definitions
+      At line 20 in file PROGRAM4.S
+   Uses
+      At line 17 in file PROGRAM4.S
+Comment: STORE used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+SUM 00000000
+
+Symbol: SUM
+   Definitions
+      At line 29 in file PROGRAM4.S
+   Uses
+      At line 20 in file PROGRAM4.S
+Comment: SUM used once
+WRITEDATA 00000000
+
+Symbol: WRITEDATA
+   Definitions
+      At line 28 in file PROGRAM4.S
+   Uses
+      None
+Comment: WRITEDATA unused
+2 symbols
+341 symbols in table

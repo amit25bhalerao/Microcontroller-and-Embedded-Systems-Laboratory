@@ -1,0 +1,1 @@
+.\labprogram.o: LABPROGRAM.S
