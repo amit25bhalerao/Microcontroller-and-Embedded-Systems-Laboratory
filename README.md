@@ -1,19 +1,27 @@
 # Assembly_Language_Programming
 
-LIST OF ASSEMBLY LANGUAGE PROGRAMS INCLUDED IN THE REPOSITORY:
+List of Assembly Language Programs included in the repository:
 
-PROGRAM_1 -> WRITE AN ASSEMBLY LANGUAGE PROGRAM TO MULTIPLY TWO 16 BIT NUMBERS 
+Program 1
+•	Write an assembly language program to multiply two 16 bit numbers. 
 
-PROGRAM_2 -> WRITE AN ASSEMBLY LANGUAGE PROGRAM TO FIND THE SUM OF FIRST TEN INTEGER NUMBERS
+Program 2
+•	Write an assembly language program to find the sum of first ten integer numbers.
 
-PROGRAM_3 -> WRITE AN ASSEMBLY LANGUAGE PROGRAM TO FIND FACTORIAL OF A NUMBER
+Program 3
+•	Write an assembly language program to find factorial of a number.
 
-PROGRAM_4 -> WRITE AN ASSEMBLY LANGUAGE PROGRAM TO ADD AN ARRAY OF 16 BIT NUMBERS AND STORE THE RESULT IN 32 BIT IN INTERNAL RAM
+Program 4
+•	Write an assembly language program to add an array of 16 bit numbers and store the result in 32 bit in internal ram.
 
-PROGRAM_5 -> WRITE AN ASSEMBLY LANGUAGE PROGRAM TO FIND THE SQUARE OF A NUMBER (1-10) USING LOOKUP TABLE
+Program 5
+•	Write an assembly language program to find the square of a number (1-10) using lookup table.
 
-PROGRAM_6 -> WRITE AN ASSEMBLY LANGUAGE PROGRAM TO FIND THE LARGEST/SMALLEST IN AN ARRAY OF 32 BIT NUMBERS
+Program 6 
+•	Write an assembly language program to find the largest/smallest in an array of 32 bit numbers.
 
-PROGRAM_7 -> WRITE AN ASSEMBLY LANGUAGE PROGRAM TO ARRANGE A SERIES OF 32 BIT NUMBERS IN ASCENDING/DESCENDING ORDER
+Program 7
+•	Write an assembly language program to arrange a series of 32 bit numbers in ascending/descending order.
 
-PROGRAM_8 -> WRITE AN ASSEMBLY LANGUAGE PROGRAM TO FIND THE NUMBER OF 1'S AND 0'S IN TWO CONSECUTIVE MEMORY LOCATIONS
+Program 8
+•	Write an assembly language program to find the number of 1's and 0's in two consecutive memory locations.
