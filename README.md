@@ -3,7 +3,6 @@
 List of Assembly Language Programs included in the repository:
 
 Program 1
-
 •	Write an assembly language program to multiply two 16 bit numbers. 
 
 Program 2
