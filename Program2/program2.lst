@@ -1,0 +1,147 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000         ; WRITE AN ALP TO FIND THE SUM OF FIRST TEN INTEGER NUMB
+                       ERS
+    3 00000000         
+    4 00000000                 AREA             PROGRAM, CODE, READONLY ; PROGR
+                                                            AM PREREQUISITES IN
+                                                             READ ONLY MEMORY
+    5 00000000                 ENTRY                        ; BEGINNING OF PROG
+                                                            RAM
+    6 00000000         
+    7 00000000 E59F0028        LDR              R0, = LIMIT ; LOAD ADDRESS OF "
+                                                            LIMIT" IN R0
+    8 00000004 E5901000        LDR              R1, [R0]    ; LOAD CONTENT OF "
+                                                            LIMIT" INTO R1 
+    9 00000008         
+   10 00000008 E0933001 
+                       LOOP    ADDS             R3, R3, R1  ; ADD R1 WITH R3, S
+                                                            TORE RESULT IN R3
+   11 0000000C E1A02003        MOV              R2, R3      ; MOVE COMPUTED ADD
+                                                            ITION RESULT FROM R
+                                                            3 TO R2
+   12 00000010 E2411001        SUB              R1, #1      ; DECREASE R1 VALUE
+                                                             BY 1
+   13 00000014 E3510000        CMP              R1, #0      ; CHECK IF "LIMIT" 
+                                                            IS EQUAL TO 0
+   14 00000018 0A000000        BEQ              STORE       ; IF LIMIT IS ZERO,
+                                                             BRANCH TO LABEL "S
+                                                            TORE"
+   15 0000001C 1AFFFFF9        BNE              LOOP        ; BRANCH UNTIL ZERO
+                                                             FLAG IS SET I.E. U
+                                                            NTIL R1 BECOMES EQU
+                                                            AL TO ZERO
+   16 00000020         
+   17 00000020 E59F300C 
+                       STORE   LDR              R3, = RESULTADDRESS ; GET THE M
+                                                            EMORY ADDRESS OF "R
+                                                            ESULTADDRESS"
+   18 00000024 E5832000        STR              R2, [R3]    ; STORE CONTENTS OF
+                                                             R2 INTO MEMORY LOC
+                                                            ATION POINTED BY RE
+                                                            SULTADDRESS
+   19 00000028         
+   20 00000028 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   21 0000002C         
+   22 0000002C 0000000A 
+                       LIMIT   DCD              10          ; SET UPPER LIMIT V
+                                                            ALUE
+   23 00000030         
+   24 00000030 00000000 
+              00000000         AREA             WRITEDATA, DATA, READWRITE ; PR
+                                                            OGRAM PREREQUISITES
+                                                             IN READ WRITE MEMO
+                                                            RY
+   25 00000000 40000000 
+                       RESULTADDRESS
+                               DCD              0X40000000  ; ADRRESS OF "RESUL
+                                                            TADDRESS" CONTAININ
+                                                            G SUM OF FIRST TEN 
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                            INTEGERS 
+   26 00000004                 END                          ; END OF PROGRAM
+Command Line: --debug --xref --apcs=interwork --depend=.\program2.d -o.\program
+2.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philip
+s --predefine="__EVAL SETA 1" --list=.\program2.lst PROGRAM2.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LIMIT 0000002C
+
+Symbol: LIMIT
+   Definitions
+      At line 22 in file PROGRAM2.S
+   Uses
+      At line 7 in file PROGRAM2.S
+Comment: LIMIT used once
+LOOP 00000008
+
+Symbol: LOOP
+   Definitions
+      At line 10 in file PROGRAM2.S
+   Uses
+      At line 15 in file PROGRAM2.S
+Comment: LOOP used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 4 in file PROGRAM2.S
+   Uses
+      None
+Comment: PROGRAM unused
+STOP 00000028
+
+Symbol: STOP
+   Definitions
+      At line 20 in file PROGRAM2.S
+   Uses
+      At line 20 in file PROGRAM2.S
+Comment: STOP used once
+STORE 00000020
+
+Symbol: STORE
+   Definitions
+      At line 17 in file PROGRAM2.S
+   Uses
+      At line 14 in file PROGRAM2.S
+Comment: STORE used once
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESULTADDRESS 00000000
+
+Symbol: RESULTADDRESS
+   Definitions
+      At line 25 in file PROGRAM2.S
+   Uses
+      At line 17 in file PROGRAM2.S
+Comment: RESULTADDRESS used once
+WRITEDATA 00000000
+
+Symbol: WRITEDATA
+   Definitions
+      At line 24 in file PROGRAM2.S
+   Uses
+      None
+Comment: WRITEDATA unused
+2 symbols
+340 symbols in table
