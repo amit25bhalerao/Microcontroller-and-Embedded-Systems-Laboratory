@@ -1,0 +1,132 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000         ; WRITE AN ALP TO MULTIPLY TWO 16 BIT NUMBERS  
+    3 00000000         
+    4 00000000                 AREA             PROGRAM, CODE, READONLY ; PROGR
+                                                            AM PREREQUISITES IN
+                                                             READ ONLY MEMORY
+    5 00000000                 ENTRY                        ; BEGINNING OF PROG
+                                                            RAM
+    6 00000000         
+    7 00000000 E1DF11B0        LDRH             R1, N1      ; LOAD VALUE OF N1 
+                                                            (16 BIT HEXA-DECIMA
+                                                            L NUMBER) IN R1
+    8 00000004 E1DF20BE        LDRH             R2, N2      ; LOAD VALUE OF N2 
+                                                            (16 BIT HEXA-DECIMA
+                                                            L NUMBER) IN R2
+    9 00000008         
+   10 00000008 E0030291        MUL              R3, R1, R2  ; MULTIPLY N1 AND N
+                                                            2 TO GET 32 BIT COM
+                                                            PUTED RESULT, STORE
+                                                             RESULT IN R3
+   11 0000000C         
+   12 0000000C E59F0008 
+                       STORE   LDR              R0, = RESULTADDRESS ; LOAD "RES
+                                                            ULTADDRESS" ADDRESS
+                                                             (32 BIT NUMBER) IN
+                                                             R0
+   13 00000010 E5803000        STR              R3, [R0]    ; STORE CONTENT OF 
+                                                            R3 INTO MEMORY LOCA
+                                                            TION POINTED BY "RE
+                                                            SULTADDRESS"
+   14 00000014         
+   15 00000014 EAFFFFFE 
+                       STOP    B                STOP        ; INFINITE LOOP
+   16 00000018         
+   17 00000018 0C 00   N1      DCW              12          ; INITIALIZE N1 WIT
+                                                            H ANY DECIMAL VALUE
+                                                             
+   18 0000001A 12 00   N2      DCW              18          ; INITIALIZE N2 WIT
+                                                            H ANY DECIMAL VALUE
+                                                            
+   19 0000001C         
+   20 0000001C 00000000        AREA             WRITEDATA, DATA, READWRITE ; PR
+                                                            OGRAM PREREQUISITES
+                                                             IN READ WRITE MEMO
+                                                            RY
+   21 00000000 40000000 
+                       RESULTADDRESS
+                               DCD              0X40000000  ; ADDRESS OF "RESUL
+                                                            TADDRESS" CONTAININ
+                                                            G THE MULTIPLIED 32
+                                                             BIT RESULT
+   22 00000004                 END                          ; END OF PROGRAM
+Command Line: --debug --xref --apcs=interwork --depend=.\program1.d -o.\program
+1.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philip
+s --predefine="__EVAL SETA 1" --list=.\program1.lst PROGRAM1.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+N1 00000018
+
+Symbol: N1
+   Definitions
+      At line 17 in file PROGRAM1.S
+   Uses
+      At line 7 in file PROGRAM1.S
+Comment: N1 used once
+N2 0000001A
+
+Symbol: N2
+   Definitions
+      At line 18 in file PROGRAM1.S
+   Uses
+      At line 8 in file PROGRAM1.S
+Comment: N2 used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 4 in file PROGRAM1.S
+   Uses
+      None
+Comment: PROGRAM unused
+STOP 00000014
+
+Symbol: STOP
+   Definitions
+      At line 15 in file PROGRAM1.S
+   Uses
+      At line 15 in file PROGRAM1.S
+Comment: STOP used once
+STORE 0000000C
+
+Symbol: STORE
+   Definitions
+      At line 12 in file PROGRAM1.S
+   Uses
+      None
+Comment: STORE unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESULTADDRESS 00000000
+
+Symbol: RESULTADDRESS
+   Definitions
+      At line 21 in file PROGRAM1.S
+   Uses
+      At line 12 in file PROGRAM1.S
+Comment: RESULTADDRESS used once
+WRITEDATA 00000000
+
+Symbol: WRITEDATA
+   Definitions
+      At line 20 in file PROGRAM1.S
+   Uses
+      None
+Comment: WRITEDATA unused
+2 symbols
+340 symbols in table
