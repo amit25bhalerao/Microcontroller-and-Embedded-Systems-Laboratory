@@ -1,0 +1,97 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
+
+==============================================================================
+
+Section Cross References
+
+    program6.o(PROGRAM) refers to program6.o(WRITEDATA) for LARGEADDRESS
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    PROGRAM                                  0x00000000   Section      140  program6.o(PROGRAM)
+    PROGRAM6.S                               0x00000000   Number         0  program6.o ABSOLUTE
+    ARRAY                                    0x0000004c   Data          44  program6.o(PROGRAM)
+    ARRAYSIZE                                0x00000078   Data           4  program6.o(PROGRAM)
+    WRITEDATA                                0x40000000   Section        8  program6.o(WRITEDATA)
+    LARGEADDRESS                             0x40000000   Data           4  program6.o(WRITEDATA)
+    SMALLADDRESS                             0x40000004   Data           4  program6.o(WRITEDATA)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv1$ARM_ISAv4$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000094, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x0000008c, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x0000008c   Code   RO            1  * PROGRAM             program6.o
+
+
+    Execution Region ER_RW (Base: 0x40000000, Size: 0x00000008, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x40000000   0x00000008   Data   RW            2    WRITEDATA           program6.o
+
+
+    Execution Region ER_ZI (Base: 0x40000008, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       140         64          0          8          0        212   program6.o
+
+    ----------------------------------------------------------------------
+       140         64          0          8          0        212   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       140         64          0          8          0        212   Grand Totals
+       140         64          0          8          0        212   ELF Image Totals
+       140         64          0          8          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                  140 (   0.14kB)
+    Total RW  Size (RW Data + ZI Data)                 8 (   0.01kB)
+    Total ROM Size (Code + RO Data + RW Data)        148 (   0.14kB)
+
+==============================================================================
+
