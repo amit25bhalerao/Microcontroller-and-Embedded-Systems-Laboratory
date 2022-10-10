@@ -25,3 +25,5 @@ Program 7
 
 Program 8
 •	Write an assembly language program to find the number of 1's and 0's in two consecutive memory locations.
+
+***Open PROGRAM.S file to view the program***
