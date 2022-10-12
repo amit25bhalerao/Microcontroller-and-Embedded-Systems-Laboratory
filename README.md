@@ -1,4 +1,4 @@
-# Assembly_Language_Programming
+# Assembly_Language_Programs
 
 |    Program     |                       Title of Program                         |   Programming Solution   | 
 | :------------: | :-------------------------------------------------------------:| :----------------------: | 
