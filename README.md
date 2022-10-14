@@ -1,4 +1,4 @@
-# Assembly_Language_Programs
+# Microcontroller_and_Embedded_Systems_Programs
 
 |    Program     |                       Title of Program                         |   Programming Solution   | 
 | :------------: | :-------------------------------------------------------------:| :----------------------: | 
@@ -22,7 +22,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-List of Assembly Language Programs included in the repository:
+List of Microcontroller and Embedded System Programs included in the repository:
 
 <p align="justify"> 
 Program 1 •	Write an assembly language program to multiply two 16 bit numbers.
