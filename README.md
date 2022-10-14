@@ -1,4 +1,4 @@
-# Microcontroller_and_Embedded_Systems_Laboratory_Programs
+# Microcontroller and Embedded Systems Laboratory Programs
 
 |    Program     |                       Title of Program                         |   Programming Solution   | 
 | :------------: | :-------------------------------------------------------------:| :----------------------: | 
