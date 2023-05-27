@@ -1,4 +1,17 @@
-# Microcontroller and Embedded Systems Laboratory Programs
+## Microcontroller and Embedded Systems Laboratory Programs
+
+Welcome to the Microcontroller and Embedded Systems Laboratory Programs repository. This repository contains a collection of programs developed for the Microcontroller and Embedded Systems Laboratory course. These programs aim to provide practical implementation and understanding of various concepts and tasks related to microcontrollers and embedded systems.
+
+### Table of Contents
+
+1. Program 1: Multiply 2 16-Bit Numbers
+2. Program 2: Sum of First Ten Integers
+3. Program 3: Factorial of a Number
+4. Program 4: Addition of Array of 16 Bit Numbers
+5. Program 5: Square of Number (1-10) using Look Up Table
+6. Program 6: Largest/Smallest in Array of 32 Bit Numbers
+7. Program 7: Arrange Series of 32 Bit Numbers in Ascending/Descending Order
+8. Program 8: Number of 1's and 0's in Consecutive Memory Location
 
 |    Program     |                       Title of Program                         |   Programming Solution   | 
 | :------------: | :-------------------------------------------------------------:| :----------------------: | 
@@ -20,39 +33,20 @@
 [lab7]: https://github.com/amit25bhalerao/Assembly-Language-Programming/tree/main/Program7/PROGRAM7.S
 [lab8]: https://github.com/amit25bhalerao/Assembly-Language-Programming/tree/main/Program8/PROGRAM8.S
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Usage
 
-List of Microcontroller and Embedded System Laboratory Programs included in the repository:
+Each program in this repository is accessible through the provided links. The programming solutions are implemented in assembly language specific to the microcontroller or embedded system being used. 
 
-<p align="justify"> 
-Program 1 •	Write an assembly language program to multiply two 16 bit numbers.
-</p>
+To use the programs, navigate to the desired program's directory and access the corresponding source code. The programs are typically written in assembly language and may require specific toolchains or development environments for compilation and execution. Make sure to set up the necessary development environment and follow any instructions mentioned in the program's documentation.
 
-<p align="justify"> 
-Program 2 •	Write an assembly language program to find the sum of first ten integer numbers.
-</p>
+### Contribution
 
-<p align="justify"> 
-Program 3 •	Write an assembly language program to find factorial of a number.
-</p>
+Contributions to this repository are encouraged. If you have any improvements, bug fixes, or additional programs related to microcontroller and embedded systems, feel free to create a pull request. Ensure that your contributions align with the repository's guidelines and maintain coding standards.
 
-<p align="justify"> 
-Program 4 •	Write an assembly language program to add an array of 16 bit numbers and store the result in 32 bit in internal ram.
-</p>
+### License and Disclaimer
 
-<p align="justify"> 
-Program 5 •	Write an assembly language program to find the square of a number (1-10) using lookup table.
-</p>
+The programs in this repository are provided under the [MIT License](https://opensource.org/licenses/MIT). However, please note that while the programs have been tested, they are provided as-is, without any warranty. The repository owner and contributors will not be liable for any damages or losses arising from the use of these programs.
 
-<p align="justify"> 
-Program 6 •	Write an assembly language program to find the largest/smallest in an array of 32 bit numbers.
-</p>
+It is recommended to use these programs for learning purposes and to verify their functionality in a controlled environment before applying them to production or real-world applications. Additionally, ensure that you comply with any licenses or restrictions associated with the microcontroller or embedded system being used.
 
-<p align="justify"> 
-Program 7 •	Write an assembly language program to arrange a series of 32 bit numbers in ascending/descending order.
-</p>
-
-<p align="justify"> 
-Program 8
-•	Write an assembly language program to find the number of 1's and 0's in two consecutive memory locations.
-</p>
+Please exercise caution and follow proper safety guidelines when working with microcontrollers and embedded systems.
